@@ -76,56 +76,9 @@ It handles expression evaluation and updates the environment as needed.
 
 ---
 
-## 📁 File Structure
-
-| File         | Description                                |
-|--------------|--------------------------------------------|
-| `lexer.ml`   | Tokenizer logic (`tokenize`)               |
-| `parser.ml`  | Parser logic (`parse_expr`, `parse_mutop`) |
-| `types.ml`   | Definitions for AST and token types        |
-| `utils.ml`   | Utility functions (e.g., pretty-printers)  |
-| `eval.ml`    | Evaluation logic (uploaded separately)     |
-
----
-
-## 🛠 Dependencies
-
-- **OCaml ≥ 4.12**
-- **`re` library** for regular expressions
-
-Install with:
-
-```bash
-opam install re
-```
-
----
-
-## 🧪 Example Code
-
-```ocaml
-let rec fact = fun n ->
-  if n <= 1 then 1
-  else n * (fact (n - 1));;
-```
-
-This would produce an AST like:
-
-```ocaml
-Let("fact", true, Fun("n", If(...)), ...)
-```
-
----
-
-## ⚠️ Academic Integrity
+## Academic Integrity
 
 > This project was developed as part of **CMSC330** at the University of Maryland.  
 > **Do not copy, share, or submit this code** for any other course or academic assignment.
 
----
 
-## 📬 Contact
-
-For questions about the code structure or behavior, please reach out to your CMSC330 instructor or teaching assistant.
-
----
